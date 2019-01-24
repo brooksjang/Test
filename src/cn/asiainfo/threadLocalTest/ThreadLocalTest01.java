@@ -36,12 +36,12 @@ public class ThreadLocalTest01 {
 
         //另启一个线程
         Thread thread1 = new Thread(){
-          @Override
+          //@Override
           public void run(){
               test.set();
               System.out.println(test.getLong());
               System.out.println(test.getStr());
-          };
+          }
         };
         thread1.start();
         thread1.join();
